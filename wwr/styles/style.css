@@ -1,11 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 #content {
     max-width: 1600px;
     margin: 0 auto;
 }
 
+
+
 nav a {
     text-align: center;
     text-decoration: none;
+    padding: 35px;
+    color: #ffe3c0
 }
 
 #hero-msg h1,
@@ -21,12 +27,20 @@ main section {
     text-align: center;
 }
 
+main section img {
+    box-sizing: border-box;
+}
+
 #background {
     height: 725px;
 }
 
 body {
     background-color: #B37F6F;
+    font-family: Roboto, Helvetica, sans-serif;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -37,14 +51,59 @@ nav a:hover {
     background-color: black;
 }
 
-.home-title, h4, .book:hover, .join:hover,
-.msg h2, .msg p, footer, footer a:hover {
+.book:hover, .join:hover, footer a:hover {
     background-color: rgba(20,30,13, .7);
-    color: #d9c2a3;
+    color: #ffe3c0;
 }
-.book, .join, footer a {
+
+h4 {
+    color: #ffe3c0;
+}
+
+.msg h2 {
+    color: #ffe3c0;
+}
+
+footer {
     background-color: rgba(20,30,13, .7);
-    color: #d9c2a3;
+    color: #ffe3c0;
+    padding: 25px 50px;
+    margin-top: 200px;
+}
+
+.msg p {
+    color: #ffe3c0;
+    padding-bottom: 15px;
+}
+
+.home-title {
+    color: #ffe3c0;
+    font-family: "Noto Sans", system-ui, 'Segoe UI', sans-serif;
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+h2 {
+    margin: 0;
+}
+
+.msg {
+    background-color: rgba(20,30,13, .7);
+    line-height: 1.5em;
+    padding:35px;
+}
+
+.book, .join {
+    background-color: rgba(20,30,13, .7);
+    color: #ffe3c0;
+    text-decoration: none;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+
+footer a {
+    color: #ffe3c0;
     text-decoration: none;
 }
 
@@ -56,6 +115,10 @@ footer p a:hover {
     text-decoration: underline;
 }
 
+footer .social img {
+    padding-top: 15px;
+}
+
 .logo {
     width: 80px;
     height: auto;
@@ -64,10 +127,27 @@ footer p a:hover {
 .icon {
     width: 80px;
     height: auto;
+    padding-top: 10px;
 }
 
 #hero-img {
     width: 100%;
     height: auto;
     display: block;
+}
+
+#logo_link {
+    padding-top: 5px;
+}
+
+.rivers-card, .camping-card, .rapids-card {
+    margin: 200px 0;
+}
+
+.card-img {
+    border: 10px solid black;
+}
+
+main section img{
+    box-sizing: border-box;
 }
