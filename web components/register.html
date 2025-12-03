@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <!-- CSS connection -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <form id="regForm" action="">
+        <h1>Register for RemindMi:</h1>
+
+        <!-- One "tab" for each step in the form: -->
+        <div class="tab">Name:
+            <p><input placeholder="First name..." 
+            oninput="this.value=this.value.replace(/[^a-zA-Z\s]/g,'')"></p>
+
+            <p><input placeholder="Last name..." 
+            oninput="this.value=this.value.replace(/[^a-zA-Z\s]/g,'')"></p>
+
+            <!-- <p><input placeholder="First name..." oninput="this.className = ''"></p>
+            <p><input placeholder="Last name..." oninput="this.className = ''"></p> -->
+        </div>
+
+        <div class="tab">Contact Info:
+            <p><input id="email" type="email" placeholder="E-mail..." oninput="this.className = ''"></p>
+            <p><input type="number" placeholder="Phone..." oninput="this.className = ''"></p>
+        </div>
+
+       <div class="tab">
+            <label class="birthday-label">Birthday:</label>
+
+            <div class="birthday-row">
+                <p><input type="text" placeholder="dd" maxlength="2" oninput="this.value=this.value.replace(/[^0-9]/g,'')"></p>
+                <p><input type="text" placeholder="mm" maxlength="2" oninput="this.value=this.value.replace(/[^0-9]/g,'')"></p>
+                <p><input type="text" placeholder="yyyy" maxlength="4" oninput="this.value=this.value.replace(/[^0-9]/g,'')"></p>
+            </div>
+        </div>
+
+
+        <div class="tab">Login Info:
+            <p><input placeholder="Username..." oninput="this.className = ''"></p>
+            <p><input type="password" placeholder="Password..." oninput="this.className = ''"></p>
+        </div>
+
+        <div style="overflow:auto;">
+            <div style="float:right;">
+                <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+            </div>
+        </div>
+
+        <!-- Circles which indicate the steps of the form: -->
+        <div style="text-align:center;margin-top:40px;">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+        </div>
+    </form>
+        <!-- JS connection -->
+    <script src="register.js"></script>
+
+    <!-- Your JS file (if
