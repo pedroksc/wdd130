@@ -200,3 +200,58 @@ footer .social {
     width: 150px;
     height: auto;
 }
+
+/*  ABOUT PAGE   */
+
+.about-content-block {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 3rem;
+    align-items: center;
+    padding: 4rem 3rem;
+
+    position: relative;
+}
+
+.text-block-about {
+    grid-column: 1 / 2;
+}
+
+.text-block-about h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.text-block-about p {
+    line-height: 1.6;
+}
+
+.goal-second-page {
+    grid-column: 2/3;
+    grid-row: 1;
+    max-width: 260px;
+    justify-self: center;
+
+    transform: translate(50px, 50px);
+    z-index: 0;
+    max-width: 300px;
+
+    filter: drop-shadow(5px 15px rgba(0, 0, 0, 0.35));
+    border-radius: 10px;
+    
+}
+
+.phone {
+    grid-column: 2/3;
+    grid-row: 1;
+    max-width: 260px;
+    justify-self: center;
+    
+    transform: translate(-80px, -80px);
+    z-index: 1;
+    max-width: 300px;
+
+    filter: drop-shadow(7px 14px rgba(0, 0, 0, 0.35));
+    border-radius: 11px;
+}
+
