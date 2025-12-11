@@ -20,20 +20,23 @@
             </nav>
         </header>
         <main>
-            <section class="create-acount-img">
+            <div class="create-acount-img">
                 <img class="arrow" src="images/arrow.png" alt="arrow img">
                 <img class="assistant" src="images/invisible_assistant.png" alt="assistant img">
-            </section>
+            </div>
 
             <section class="why-signup">
                 <div class="why-signup-block">
                     <h3>Why Sign Up?</h3>
                     <p>Sign up to unlock all the features RemindMi has to offer. From personalized goals to an intelligent AI assistant, create an account now to take control of your life again. With your personal RemindMi dashboard, you’ll have everything you need in one place—task lists, reminders, progress tracking, and motivational insights. Whether you're building better habits, staying ahead of schoolwork, or balancing personal projects, RemindMi adapts to your unique needs. Don’t just manage your schedule—master it. Join today and start your journey toward greater clarity, consistency, and confidence.</p>
+                    <button id="open-signup" class="primary-btn">Create Account</button>
                 </div>
             </section>
 
-            <section class="signup-hero">
+            <div id="signup-modal" class="signup-modal">
                 <div class="signup-card">
+                    <button type="button" class="close-modal">&times;</button>
+
                     <form action="#" method="post">
                         <label for="username">Username:</label>
                         <input type="text" id="username" name="username" required>
@@ -47,7 +50,7 @@
                         <button type="submit">Sign Up</button>
                     </form>
                 </div>
-            </section>
+            </div>
         </main>
         <footer>
             <p>RemindMi &copy; 2025 - Pedro Camargo</p>
@@ -64,6 +67,27 @@
                 </a>        
             </div>
         </footer>    
-    </div>        
+    </div>
+    <script>
+        const openBtn = document.getElementById('open-signup');
+        const modal = document.getElementById('signup-modal');
+        const closeBtn = document.querySelector('.close-modal');
+
+        openBtn.addEventListener('click', () => {
+            modal.classList.add('show');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.classList.remove('show');
+        });
+
+        // Close when clicking outside the card
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('show');
+            }
+        });
+    </script>
+        
 </body>
 </html>
